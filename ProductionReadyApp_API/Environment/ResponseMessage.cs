@@ -11,7 +11,7 @@ namespace ProductionReadyApp_API.Environment
         internal static readonly string Code_Ok = "200";
         internal static readonly string Code_Created = "201";
         internal static readonly string Code_NoContent = "204";
-        internal static readonly string Code_NotFound = "204";
+        internal static readonly string Code_NotFound = "404";
 
         internal static readonly string Message_NullBody = "Information Missing...";
         internal static readonly string Message_RecordCreated = "The record has been added successfully!!!";

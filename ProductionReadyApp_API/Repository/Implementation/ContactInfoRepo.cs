@@ -32,16 +32,11 @@ namespace ProductionReadyApp_API.Repository.Implementation
         }
         public void Update(ContactInfo contactInfo, ContactInfo entity)
         {
-            if (entity.FirstName != null ||entity.FirstName.Trim()!="")
-                contactInfo.FirstName = entity.FirstName;
-            if (entity.LastName != null || entity.LastName.Trim()!="")
-                contactInfo.LastName = entity.LastName;
-            if (entity.Email != null || entity.Email.Trim()!="")
-                contactInfo.Email = entity.Email;
-            if (entity.Status != null || entity.Status.Trim()!="")
-                contactInfo.Status = entity.Status.ToLower();
-            if (entity.PhoneNumber != null || entity.PhoneNumber.Trim()!="")
-                contactInfo.PhoneNumber = entity.PhoneNumber;
+            contactInfo.FirstName = entity.FirstName;
+            contactInfo.LastName = entity.LastName;
+            contactInfo.Email = entity.Email;
+            contactInfo.Status = entity.Status.ToLower();
+            contactInfo.PhoneNumber = entity.PhoneNumber;
             _contactInfoContext.SaveChanges();
         }
         public void Delete(ContactInfo contactInfo)
